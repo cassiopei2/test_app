@@ -1,0 +1,9 @@
+<mat-toolbar [color]="'accent'"
+             class="flex flex-row place-content-between items-center">
+    <span>Cool planets 😎</span>
+    <div class="flex flex-row">
+      <button *ngFor="let item of navigation"
+              [routerLink]="item.path"
+              mat-button>{{item.title}}</button>
+    </div>
+</mat-toolbar>

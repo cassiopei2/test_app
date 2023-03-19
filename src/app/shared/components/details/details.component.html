@@ -1,0 +1,26 @@
+<mat-dialog-content>
+  <div class="flex flex-row place-content-between items-center">
+    <h1>
+      {{data.planet.name | titlecase}} persons list
+    </h1>
+    <button mat-icon-button (click)="dismiss()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <mat-list *ngIf="check; else loading" class="grid grid-cols-2">
+    <mat-list-item *ngFor="let resident of residents"
+                   lines="2">
+      <span matListItemTitle>
+        {{resident?.name}}
+      </span>
+      <span class="text-slate-900 opacity-70">Height: {{resident?.height}};
+                                              Date of birth: {{resident?.birth_year}}</span>
+    </mat-list-item>
+  </mat-list>
+</mat-dialog-content>
+
+<ng-template #loading>
+  <div class="flex flex-col justify-center h-56 items-center">
+    <mat-spinner diameter="32"></mat-spinner>
+  </div>
+</ng-template>

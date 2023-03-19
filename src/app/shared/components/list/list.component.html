@@ -1,0 +1,33 @@
+<div class="flex flex-col gap-4">
+  <div class="flex flex-row place-content-between">
+    <div>
+      <span class="text-2xl">Planets list</span>
+      <br>
+      <span class="text-slate-900 opacity-70">Page {{counter}}</span>
+    </div>
+    <div class="flex flex-row gap-2">
+      <button (click)="prev()"
+              mat-icon-button>
+        <mat-icon>arrow_back</mat-icon>
+      </button>
+      <button (click)="next()"
+              mat-icon-button>
+        <mat-icon>arrow_forward</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <mat-accordion *ngIf="planets$ | async as planets; else loading">
+    <mat-expansion-panel *ngFor="let planet of planets">
+      <mat-expansion-panel-header>{{planet.name}}</mat-expansion-panel-header>
+      <app-table *ngIf="planet" [planet]="planet"></app-table>
+    </mat-expansion-panel>
+  </mat-accordion>
+
+
+  <ng-template #loading>
+    <div class="flex flex-col justify-center h-56 items-center">
+      <mat-spinner diameter="64"></mat-spinner>
+    </div>
+  </ng-template>
+</div>
