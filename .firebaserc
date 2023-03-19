@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "aniroosh-com"
+  },
+  "targets": {
+    "aniroosh-com": {
+      "hosting": {
+        "app": [
+          "test-planets"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

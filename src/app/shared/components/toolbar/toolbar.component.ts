@@ -4,8 +4,7 @@ import { Navigation } from "../../models/navigation";
 
 @Component({
   selector: 'app-toolbar',
-  templateUrl: './toolbar.component.html',
-  styleUrls: ['./toolbar.component.scss']
+  templateUrl: './toolbar.component.html'
 })
 export class ToolbarComponent {
 

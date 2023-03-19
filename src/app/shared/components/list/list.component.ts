@@ -1,14 +1,11 @@
 import {
   Component,
-  Input,
   OnInit,
 } from '@angular/core';
 import { HttpService } from "../../services/http/http.service";
 import {
   map,
-  mergeMap,
   Observable,
-  of,
 } from "rxjs";
 import { Planet } from "../../models/planet";
 import { MatSnackBar } from "@angular/material/snack-bar";
