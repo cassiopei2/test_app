@@ -7,8 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from "@angular/material/button";
 import { SharedModule } from "./shared/shared.module";
 import { HttpClientModule } from "@angular/common/http";
-import { AngularFireModule } from "@angular/fire/compat";
-import { firebase } from "../environments/environments";
 
 @NgModule({
             declarations: [
@@ -21,7 +19,6 @@ import { firebase } from "../environments/environments";
               MatButtonModule,
               SharedModule,
               HttpClientModule,
-              AngularFireModule.initializeApp(firebase),
             ],
             providers: [],
             bootstrap: [AppComponent],
